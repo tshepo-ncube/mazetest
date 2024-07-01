@@ -4,10 +4,10 @@ const gameArea = document.getElementById('gameArea');
 let ballPosX = gameArea.clientWidth / 2 - ball.clientWidth / 2;
 let ballPosY = gameArea.clientHeight / 2 - ball.clientHeight / 2;
 
-const speedFactor = 0.5;
+const speedFactor = 0.05;
 
 function updatePosition(accelX, accelY) {
-  ballPosX += accelX * speedFactor;
+  ballPosX -= accelX * speedFactor;
   ballPosY += accelY * speedFactor;
 
   // Constrain the ball within the game area
